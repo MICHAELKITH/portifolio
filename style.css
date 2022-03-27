@@ -1,0 +1,251 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}   
+@media all and (max-width: 500px) {
+    body{
+        color:linear-gradient(
+            to right,
+            rgba(245, 70, 66, 0.75),
+            rgba(8,83, 156, 0.75)
+        ); 
+    }
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Poppins, sans-serif;
+    perspective: 100px;
+    box-shadow: #333;
+
+  
+}
+.container{
+    background: linear-gradient(
+        to right,
+        rgba(201, 191, 191, 0.75),
+        rgba(220, 227, 233, 0.75)
+    );;
+
+    width: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    padding: 25px ,30px;
+}
+.card{
+    transform-style: preserve-3d;
+    min-width: 80vh;
+    width: 35rem;
+    border-radius: 30px;
+    padding: 0rem 5rem;
+    box-shadow: 0 20px 20px rgba(0,0,0, 0.2) 0px 0px 50px rgba(0, 0, 0, 0);
+}
+.mike{
+    min-height: 45vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.mike img{
+    z-index: 10;
+    transition: all 0.75s ease-out;
+    object-fit: cover;
+    border-radius: 50%;
+    width: 10rem;
+    height: 15rem;
+    position: absolute;
+}
+.circle{
+    width: 10rem;
+    height: 15rem;
+    background: linear-gradient(
+        to right,
+        rgba(245, 70, 66, 0.75),
+        rgba(8,83, 156, 0.75)
+    );
+    position: absolute;
+    border-radius: 50%;
+    z-index: 1;
+
+}
+.info h1{
+    font-size: 15px;
+    transition: all 0.75s ease-out;
+    text-decoration-color: #333;
+    text-align: center;
+}
+.info h3{
+    font-size: 13px;
+    padding: 2rem 0rem;
+    color: black;
+    font-weight: bold;
+    transition: all 0.75s ease-out;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.skills{
+    display: flex;
+    justify-content: space-between;
+    transition: all 0.75s ease-out;
+}
+.skills button{
+    padding: 0.1rem 3rem;
+    background: none;
+    border-radius: 25px;
+    color: lightcoral;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    color: #585858;
+    
+}
+.skills button:hover{
+     background-color: aliceblue;
+    cursor: pointer;
+}
+
+.Hire-me{
+    justify-content: center;
+    margin-bottom: 0rem;
+    border-radius: 25px;
+    bottom: 10px;
+    padding: 5px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    margin-left: 130px;
+}
+.Hire-me button{
+    width: 50%;
+    padding: 3rem 0rem;
+    background: linear-gradient(
+        to right,
+        rgba(245, 70, 66, 0.75),
+        rgba(8,83, 156, 0.75)
+    );
+    padding: 2px;
+    border-radius: 25px;
+    cursor: pointer;
+    
+    
+
+}
+.title{
+    color: red;
+    font-size: 1rem;
+}
+.back{
+    justify-content: center;
+    margin-bottom: 0rem;
+    border-radius: 25px;
+    bottom: 10px;
+    padding: 5px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    margin-right: 200px;
+}
+.back button{
+    width: 50%;
+    padding: 3rem 0rem;
+    background: linear-gradient(
+        to right,
+        rgba(245, 70, 66, 0.75),
+        rgba(8,83, 156, 0.75)
+    );
+    padding: 2px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+.bar{
+   margin-bottom: 0rem;
+   border-radius: 25px;
+
+}
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: absolute;
+    z-index: 1;
+    top: 0px;
+    left: 35px;
+    background:  rgba(8,83, 156, 0.75);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 0px;
+    border-radius: 10px;
+    padding: 70px ,20px;
+    
+}
+  
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    transition: 0.3s;
+    display: block;
+}
+  
+  .sidenav a:hover {
+    color: #000;
+}
+  
+  .sidenav .closebtn {
+    position: relative;
+    top: 0;
+    left: 180px;
+    font-size: 36px;
+    margin-right: 5px;
+}
+  
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+.copyright{
+    text-align: center;
+    font-size: small;
+    font-family: 'Times New Roman', Times, serif;
+}
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+    border-radius: 20px;
+}
+  
+  button[type=submit] {
+    justify-content: center;
+    margin-bottom: 0rem;
+    border-radius: 25px;
+    bottom: 10px;
+    padding: 5px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    margin-right: 200px;
+    width: 50%;
+    padding: 3rem 0rem;
+    background: linear-gradient(
+        to right,
+        rgba(245, 70, 66, 0.75),
+        rgba(8,83, 156, 0.75)
+    );
+    padding: 2px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+  
+  button[type=submit]:hover {
+    background-color: #ceade4;
+  }
+  
+

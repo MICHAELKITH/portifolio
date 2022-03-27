@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knowledge and Skils</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Po" rel="styles">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="card">
+            <div class="back">
+                <a href="index.html"><button>Back</button></a>
+            </div>
+            <div class="mike">
+                <div class="circle">
+                    <img src="IMAGES/IMG_8390.jpg" alt="">
+                </div>
+            </div>
+            <div class="info">
+                <div class="title">Send message</div>
+
+
+                <div class="form-container">
+
+                    <form onsubmit="sendEmail(); reset(); return false;">
+                        <div class="details">
+                            <div class="field input">
+                                <label>Your Name</label>
+                                <input type="text" id="name" placeholder="Your Name" required maxlength="50">
+                            </div>
+                            <div class="field input">
+                                <label>Phone</label>
+                                <input type="text" id="phone" placeholder="Phone no" required maxlength="50">
+                            </div>
+
+                            <div class="field input">
+                                <label>Enter Email</label>
+                                <input type="text" id="email" placeholder="Email address" required maxlength="50">
+                            </div>
+
+                            <label for="message">Message:</label>
+                            <textarea id="message"  placeholder="How can I help you" rows="10"
+                                maxlength="6000" required></textarea>
+                        </div>
+
+
+
+                        <button  type="submit" onclick="sendEmail">Post</button>
+                    </form>
+                   
+                </div>
+                <hr>
+                <p class="copyright">Code@Mike</p>
+
+
+            </div>
+
+
+        </div>
+
+    </div>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail() {
+            Email.send({
+                SecureToken: "748cdca6-c4c5-4f22-addc-61cc04b50a54 ",
+                To: 'michaelkithinji27@gmail.com',
+                From: document.getElementById("email").value,
+                Subject: "New Contact Form Enquiry",
+                Body: "Name:" + document.getElementById("name").value
+                    + "<br> Email:" + document.getElementById("email").value
+                    + "<br> Phone no:" + document.getElementById("phone").value
+                    + "<br> Message:" + document.getElementById("message").value
+            }).then(
+                message => alert("Message sent Successfully ")
+            );
+        }
+    </script>
+</body>
+
+</html>
